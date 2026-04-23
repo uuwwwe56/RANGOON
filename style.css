@@ -251,91 +251,59 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
 }
+/* CONTACT */
 .contact-section {
-  padding: 60px 0;
+  background: #f8f9fa;
 }
-.text-green {
-  color: #5cb85c;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-.main-title {
-  color: #002d5b;
-  font-weight: 800;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.contact-info-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
+
+/* ICON */
 .icon-circle {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #ddd;
+  width: 45px;
+  height: 45px;
+  background: #eef2ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #5cb85c;
-  margin-right: 15px;
+  color: #0b2545;
 }
-.form-control {
-  border-radius: 4px;
-  padding: 12px;
-  border: 1px solid #eee;
-  margin-bottom: 15px;
-}
-.btn-yellow {
-  background-color: #ffcc29;
-  border: none;
-  font-weight: bold;
-  width: 100%;
-  padding: 12px;
-}
-.btn-yellow:hover {
-  background-color: #e6b800;
-}
-.map-container {
-  border-radius: 15px;
-  overflow: hidden;
-  height: 250px;
+
+/* ITEM */
+.contact-info-item {
+  display: flex;
+  gap: 15px;
   margin-bottom: 20px;
 }
+
+/* MAP */
+.map-container iframe {
+  border-radius: 15px;
+}
+
+/* WA CARD */
 .wa-card {
-  background-color: #001f3f;
-  color: white;
-  border-radius: 10px;
-  padding: 30px;
-  text-align: center;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
+
+.wa-card:hover {
+  transform: translateY(-8px);
+}
+
+/* BUTTON WA */
 .btn-outline-wa {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  border-radius: 8px;
-  padding: 10px;
-  display: inline-block;
-  width: 100%;
+  border: 2px solid #25d366;
+  color: #25d366;
+  padding: 8px 18px;
+  border-radius: 30px;
   text-decoration: none;
-  margin-top: 15px;
+  transition: 0.3s;
 }
 
-/* Custom Styling untuk Tombol */
-.btn-pesan {
-  background-color: #ffcc29;
-  color: #000;
-  font-weight: bold;
-  border: none;
-  padding: 12px;
-  border-radius: 8px;
-
-  /* Fokus hanya ke warna */
-  transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-.btn-pesan:hover {
-  background-color: #cea918;
-  color: #000;
+.btn-outline-wa:hover {
+  background: #25d366;
+  color: white;
 }
