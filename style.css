@@ -1,45 +1,52 @@
 /* ================= NAVBAR ================= */
+/* ================= NAVBAR ================= */
 
-/* 🔥 DIUBAH: jadi transparan + posisi di atas slider */
+/* 🔥 NAVBAR DEFAULT (PUTIH BG → TEXT HITAM) */
 .navbar {
   padding: 0.8rem 0;
   transition: all 0.3s ease;
-  background: transparent; /* 🔥 penting */
-  position: fixed; /* 🔥 penting */
+  background: #ffffff; /* 🔥 sekarang putih */
+  position: fixed;
   width: 100%;
   z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* biar elegan */
 }
 
-/* 🔥 DITAMBAH: efek saat scroll */
+/* 🔥 SAAT SCROLL (LEBIH SOLID) */
 .navbar.scrolled {
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
+  background: #ffffff;
 }
 
-/* tetap */
+/* TEXT */
 .nav-item {
   font-size: 16px;
 }
 
-/* 🔥 DIUBAH: warna jadi putih */
+/* 🔥 TEXT HITAM */
 .nav-link {
   font-weight: 500;
-  color: #fff !important; /* 🔥 penting */
+  color: #111 !important; /* 🔥 hitam */
   letter-spacing: 0.5px;
   position: relative;
   padding: 5px 0;
   display: inline-block;
+  transition: 0.3s;
 }
 
-/* 🔥 DIUBAH: warna garis jadi kuning (branding) */
+/* 🔥 HOVER TEXT */
+.nav-link:hover {
+  color: #facc15 !important; /* kuning */
+}
+
+/* 🔥 GARIS BAWAH */
 .nav-link::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #facc15; /* 🔥 kuning */
+  background-color: #facc15;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -48,7 +55,16 @@
   width: 100%;
 }
 
-/* Mobile tetap */
+/* 🔥 ACTIVE MENU */
+.nav-link.active {
+  color: #facc15 !important;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* MOBILE */
 @media (max-width: 991px) {
   .navbar-nav {
     padding: 1rem 0;
@@ -62,7 +78,11 @@
   }
 }
 
-/* Hilangkan outline */
+/* TOGGLER */
+.navbar-toggler {
+  border: none;
+}
+
 .navbar-toggler:focus {
   box-shadow: none;
 }
@@ -91,23 +111,23 @@
 
 /* gambar */
 .slider figure:nth-child(1) {
-  background-image: url(img/Slider/s1.png);
+  background-image: url(img/Slider/sl1.png);
   animation-delay: 0s;
 }
 .slider figure:nth-child(2) {
-  background-image: url(img/Slider/s2.png);
+  background-image: url(img/Slider/sl3.png);
   animation-delay: -4s;
 }
 .slider figure:nth-child(3) {
-  background-image: url(img/Slider/s3.png);
+  background-image: url(img/Slider/sl2.png);
   animation-delay: -8s;
 }
 .slider figure:nth-child(4) {
-  background-image: url(img/Slider/s4.png);
+  background-image: url(img/Slider/sl4.png);
   animation-delay: -12s;
 }
 .slider figure:nth-child(5) {
-  background-image: url(img/Slider/s2.png);
+  background-image: url(img/Slider/sl5.png);
   animation-delay: -16s;
 }
 
