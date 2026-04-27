@@ -232,13 +232,13 @@
 }
 
 .about-card h6 {
-  font-size: 5px;      /* 🔥 sedikit dinaikkan biar masih kebaca */
+  font-size: 7px;      /* 🔥 sedikit dinaikkan biar masih kebaca */
   margin-bottom: 4px;  /* 🔥 diperkecil */
   line-height: 1.0;    /* 🔥 rapat */
 }
 
 .about-card ul {
-  font-size: 5px;      /* 🔥 diperkecil */
+  font-size: 7px;      /* 🔥 diperkecil */
   line-height: 1.0;    /* 🔥 rapat */
   padding-left: 0;     /* 🔥 biar nggak makan space */
 }
@@ -251,7 +251,7 @@
 }
 
 .about-card i {
-  font-size: 5px;      /* 🔥 kecilin icon */
+  font-size: 7px;      /* 🔥 kecilin icon */
   flex-shrink: 0;      /* 🔥 icon tidak gepeng */
 }
 
