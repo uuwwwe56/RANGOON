@@ -218,35 +218,47 @@
 
 /* Mobile spacing */
 @media (max-width: 768px) {
-  .about-card {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+.about-card {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 
-     width: 65%;        /* 🔥 DIUBAH (lebih kecil) */
-    max-width: 160px;  /* 🔥 DIUBAH */
+  width: 65%;
+  max-width: 130px;
 
-    padding: 10px;     /* 🔥 DIUBAH (lebih compact) */
-    height: auto;
-  }
+  padding: 8px;        /* 🔥 lebih kecil */
+  height: auto;        /* 🔥 WAJIB: jangan pakai height fix */
+  overflow: hidden;    /* 🔥 jaga biar tidak keluar */
+}
 
-  .about-card h6 {
-    font-size: 10px;
-    margin-bottom: 8px;
-  }
+.about-card h6 {
+  font-size: 8px;      /* 🔥 sedikit dinaikkan biar masih kebaca */
+  margin-bottom: 6px;  /* 🔥 diperkecil */
+  line-height: 1.2;    /* 🔥 rapat */
+}
 
-  .about-card ul {
-    font-size: 9px;
-    line-height: 1.3;
-  }
+.about-card ul {
+  font-size: 8px;      /* 🔥 diperkecil */
+  line-height: 1.2;    /* 🔥 rapat */
+  padding-left: 0;     /* 🔥 biar nggak makan space */
+}
 
-  .about-card li {
-    margin-bottom: 4px;
-  }
+.about-card li {
+  margin-bottom: 2px;  /* 🔥 lebih rapat */
+  display: flex;       /* 🔥 biar icon + text sejajar */
+  align-items: flex-start;
+  gap: 4px;            /* 🔥 jarak kecil */
+}
 
-  .about-card i {
-    font-size: 10px;
-  }
+.about-card i {
+  font-size: 8px;      /* 🔥 kecilin icon */
+  flex-shrink: 0;      /* 🔥 icon tidak gepeng */
+}
+
+.about-card li span {
+  display: block;
+  word-break: break-word; /* 🔥 biar text turun */
+}
 }
 
 /* =====SERVICES===== */
