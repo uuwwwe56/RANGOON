@@ -223,22 +223,22 @@
   right: 10px;
   bottom: 10px;
 
-  width: 65%;
-  max-width: 130px;
+  width: 50%;
+  max-width: 120px;
 
-  padding: 6px;        /* 🔥 lebih kecil */
+  padding: 4px;        /* 🔥 lebih kecil */
   height: auto;        /* 🔥 WAJIB: jangan pakai height fix */
   overflow: hidden;    /* 🔥 jaga biar tidak keluar */
 }
 
 .about-card h6 {
-  font-size: 5px;      /* 🔥 sedikit dinaikkan biar masih kebaca */
+  font-size: 3px;      /* 🔥 sedikit dinaikkan biar masih kebaca */
   margin-bottom: 4px;  /* 🔥 diperkecil */
   line-height: 1.0;    /* 🔥 rapat */
 }
 
 .about-card ul {
-  font-size: 5px;      /* 🔥 diperkecil */
+  font-size: 3px;      /* 🔥 diperkecil */
   line-height: 1.0;    /* 🔥 rapat */
   padding-left: 0;     /* 🔥 biar nggak makan space */
 }
@@ -247,11 +247,11 @@
   margin-bottom: 2px;  /* 🔥 lebih rapat */
   display: flex;       /* 🔥 biar icon + text sejajar */
   align-items: flex-start;
-  gap: 4px;            /* 🔥 jarak kecil */
+  gap: 1px;            /* 🔥 jarak kecil */
 }
 
 .about-card i {
-  font-size: 5px;      /* 🔥 kecilin icon */
+  font-size: 3px;      /* 🔥 kecilin icon */
   flex-shrink: 0;      /* 🔥 icon tidak gepeng */
 }
 
