@@ -232,14 +232,14 @@
 }
 
 .about-card h6 {
-  font-size: 8px;      /* 🔥 sedikit dinaikkan biar masih kebaca */
-  margin-bottom: 6px;  /* 🔥 diperkecil */
-  line-height: 1.2;    /* 🔥 rapat */
+  font-size: 7px;      /* 🔥 sedikit dinaikkan biar masih kebaca */
+  margin-bottom: 4px;  /* 🔥 diperkecil */
+  line-height: 1.1;    /* 🔥 rapat */
 }
 
 .about-card ul {
-  font-size: 8px;      /* 🔥 diperkecil */
-  line-height: 1.2;    /* 🔥 rapat */
+  font-size: 7px;      /* 🔥 diperkecil */
+  line-height: 1.1;    /* 🔥 rapat */
   padding-left: 0;     /* 🔥 biar nggak makan space */
 }
 
@@ -251,7 +251,7 @@
 }
 
 .about-card i {
-  font-size: 8px;      /* 🔥 kecilin icon */
+  font-size: 7px;      /* 🔥 kecilin icon */
   flex-shrink: 0;      /* 🔥 icon tidak gepeng */
 }
 
