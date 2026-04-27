@@ -109,6 +109,7 @@
   background-position: center;
   animation: fade 20s infinite;
   opacity: 0;
+   max-width: 100%; /* 🔥 TAMBAHAN */
 }
 
 /* gambar */
@@ -164,8 +165,10 @@
 /* GAMBAR */
 .about-section img {
   border-radius: 20px;
+  max-width: 100%; /* 🔥 TAMBAHAN */
+  height: auto;   /* 🔥 TAMBAHAN */
+  display: block; /* 🔥 TAMBAHAN */
 }
-
 /* CARD OVERLAY */
 .about-card {
   position: absolute;
@@ -220,11 +223,11 @@
     right: 10px;
     bottom: 10px;
 
-    width: 70%;
-    max-width: 170px;
+     width: 65%;        /* 🔥 DIUBAH (lebih kecil) */
+    max-width: 160px;  /* 🔥 DIUBAH */
 
-    padding: 12px;
-    height: auto; /* penting */
+    padding: 10px;     /* 🔥 DIUBAH (lebih compact) */
+    height: auto;
   }
 
   .about-card h6 {
@@ -327,6 +330,10 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
+}
+/* ✅ FIX OVERFLOW (TAMBAHAN) */
+html, body {
+  overflow-x: hidden; /* 🔥 TAMBAHAN */
 }
 /* CONTACT */
 
