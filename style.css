@@ -337,7 +337,60 @@
   transition: all 0.3s ease;
 }
 
+/* =====TESTIMONI====== */
+/* SECTION */
+.testimonial-section {
+  background: #f9fafb;
+}
 
+/* CARD */
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* FOTO PROFILE */
+.testi-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #22c55e; /* hijau */
+}
+
+/* RATING */
+.rating {
+  color: #facc15;
+  font-size: 16px;
+}
+
+/* GARIS */
+.line {
+  width: 40px;
+  height: 3px;
+  background: #22c55e;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* QUOTE ICON */
+.quote-icon {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 60px;
+  color: rgba(34, 197, 94, 0.1);
+  font-weight: bold;
+}
 /* =====KONTAK===== */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
