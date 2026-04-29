@@ -431,6 +431,10 @@ body {
   color: #0b2545;
 }
 
+.contact-info-item a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
 /* ITEM */
 .contact-info-item {
   display: flex;
@@ -474,4 +478,51 @@ body {
 .btn-outline-wa:hover {
   background: #25d366;
   color: white;
+}
+
+/* PAKSA ROW JADI FLEX RAPI */
+.contact-section .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* PAKSA 2 KOLOM SELALU 50% */
+.contact-section .col-lg-6 {
+  width: 50%;
+}
+
+/* BIAR TINGGI SAMA */
+.contact-section .row.align-items-center {
+  align-items: stretch !important;
+}
+
+/* MAP FULL HEIGHT */
+.map-container {
+  height: 100%;
+}
+
+.map-container iframe {
+  height: 100%;
+  min-height: 350px;
+  width: 100%;
+  display: block;
+}
+/* MOBILE VIEW CONTACT */
+@media (max-width: 768px) {
+
+  /* jadi 1 kolom */
+  .contact-section .col-lg-6 {
+    width: 100% !important;
+  }
+
+  /* kasih jarak biar enak */
+  .map-container {
+    margin-top: 20px;
+  }
+
+  /* tinggi map lebih proporsional di HP */
+  .map-container iframe {
+    height: 250px !important;
+  }
+
 }
