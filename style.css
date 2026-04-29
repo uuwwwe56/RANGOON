@@ -2,16 +2,18 @@
 
 /* 🔥 NAVBAR DEFAULT (PUTIH BG → TEXT HITAM) */
 .navbar {
-  padding: 0.8rem 0;
-  transition: all 0.3s ease;
-  background: #ffffff; /* 🔥 sekarang putih */
   position: fixed;
   width: 100%;
   z-index: 999;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* biar elegan */
+
+  padding: 0.8rem 0;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.3s ease;
 }
 
-/* 🔥 SAAT SCROLL (LEBIH SOLID) */
+/* 🔥 SAAT SCROLL */
 .navbar.scrolled {
   background: #ffffff;
 }
@@ -21,40 +23,43 @@
   font-size: 16px;
 }
 
-/* 🔥 TEXT HITAM */
 .nav-link {
-  font-weight: 500;
-  color: #111 !important; /* 🔥 hitam */
-  letter-spacing: 0.5px;
   position: relative;
-  padding: 5px 0;
   display: inline-block;
+
+  padding: 5px 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  color: #111 !important;
   transition: 0.3s;
 }
 
-/* 🔥 HOVER TEXT */
+/* HOVER */
 .nav-link:hover {
-  color: #facc15 !important; /* kuning */
+  color: #facc15 !important;
 }
 
-/* 🔥 GARIS BAWAH */
+/* GARIS BAWAH */
 .nav-link::after {
   content: "";
   position: absolute;
   bottom: -2px;
   left: 50%;
+
   width: 0;
   height: 2px;
+
   background-color: #facc15;
-  transition: all 0.3s ease;
   transform: translateX(-50%);
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover::after {
   width: 100%;
 }
 
-/* 🔥 ACTIVE MENU */
+/* ACTIVE */
 .nav-link.active {
   color: #facc15 !important;
 }
@@ -63,7 +68,16 @@
   width: 100%;
 }
 
-/* MOBILE */
+/* TOGGLER */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* MOBILE NAVBAR */
 @media (max-width: 991px) {
   .navbar-nav {
     padding: 1rem 0;
@@ -77,117 +91,77 @@
   }
 }
 
-/* TOGGLER */
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
 /* ================= SLIDER ================= */
 
 .slider {
+  position: relative;
+  overflow: hidden;
+
   width: 100%;
   height: calc(100svh - 70px);
-  overflow: hidden;
-  position: relative;
   margin-top: 70px;
 }
 
-
-
-/* slide background */
+/* SLIDE BACKGROUND */
 .slider figure {
-  width: 100%;
-  height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+
   background-size: cover;
   background-position: center;
-  animation: fade 20s infinite;
+
   opacity: 0;
-   max-width: 100%; /* 🔥 TAMBAHAN */
+  animation: fade 20s infinite;
 }
 
-/* gambar */
+/* GAMBAR */
 .slider figure:nth-child(1) {
   background-image: url(img/Slider/sl1.png);
   animation-delay: 0s;
 }
+
 .slider figure:nth-child(2) {
   background-image: url(img/Slider/sl3.png);
   animation-delay: -4s;
 }
+
 .slider figure:nth-child(3) {
   background-image: url(img/Slider/sl2.png);
   animation-delay: -8s;
 }
+
 .slider figure:nth-child(4) {
   background-image: url(img/Slider/sl4.png);
   animation-delay: -12s;
 }
+
 .slider figure:nth-child(5) {
   background-image: url(img/Slider/sl5.png);
   animation-delay: -16s;
 }
 
-/* animasi */
+/* ANIMASI */
 @keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  25%  { opacity: 1; }
+  30%  { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 .slider::before {
   display: none;
 }
 
-/* =====ABOUT===== */
-.about-section {
-  background: #f8f9fa;
-}
-
-/* GAMBAR */
-.about-section img {
-  border-radius: 20px;
-  max-width: 100%; /* 🔥 TAMBAHAN */
-  height: auto;   /* 🔥 TAMBAHAN */
-  display: block; /* 🔥 TAMBAHAN */
-}
-/* CARD OVERLAY */
-.about-card {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 260px;
-  background: #0b2545; /* biru tua */
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* ICON */
-.about-card i {
-  color: #facc15; /* kuning branding */
-}
-
+/* MOBILE SLIDER */
 @media (max-width: 768px) {
- .slider {
-    aspect-ratio: 16 / 9; /* atau 4/3 sesuai gambar kamu */
+  .slider {
+    aspect-ratio: 16 / 9;
     height: auto;
   }
 
@@ -195,7 +169,7 @@
     background-size: cover;
     background-position: center;
   }
-  /* Optional: kalau mau gambar fokus ke tengah atas (misal banner) */
+
   .slider figure:nth-child(1),
   .slider figure:nth-child(2),
   .slider figure:nth-child(3),
@@ -205,63 +179,96 @@
   }
 }
 
-.about-card {
-  background: #0d2b4d; /* biru gelap seperti gambar */
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+/* ================= ABOUT ================= */
+
+.about-section {
+  background: #f8f9fa;
 }
 
-/* Biar icon kuning */
+/* GAMBAR */
+.about-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* CARD */
+.about-card {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+  width: 260px;
+  background: #0b2545;
+
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ICON */
+.about-card i {
+  color: #facc15;
+}
+
+/* VARIASI STYLE (DITAHANKAN SESUAI KODE ASLI) */
+.about-card {
+  background: #0d2b4d;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
 .about-card i {
   color: #ffc107;
 }
 
-/* Mobile spacing */
+/* MOBILE ABOUT */
 @media (max-width: 768px) {
-.about-card {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
+  .about-card {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 
-  width: 50%;
-  max-width: 120px;
+    width: 50%;
+    max-width: 120px;
 
-  padding: 4px;        /* 🔥 lebih kecil */
-  height: auto;        /* 🔥 WAJIB: jangan pakai height fix */
-  overflow: hidden;    /* 🔥 jaga biar tidak keluar */
+    padding: 4px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .about-card h6 {
+    font-size: 7px;
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+
+  .about-card ul {
+    font-size: 7px;
+    line-height: 1;
+    padding-left: 0;
+  }
+
+  .about-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1px;
+    margin-bottom: 2px;
+  }
+
+  .about-card i {
+    font-size: 7px;
+    flex-shrink: 0;
+  }
+
+  .about-card li span {
+    display: block;
+    word-break: break-word;
+  }
 }
 
-.about-card h6 {
-  font-size: 7px;      /* 🔥 sedikit dinaikkan biar masih kebaca */
-  margin-bottom: 4px;  /* 🔥 diperkecil */
-  line-height: 1.0;    /* 🔥 rapat */
-}
+/* ================= SERVICES ================= */
 
-.about-card ul {
-  font-size: 7px;      /* 🔥 diperkecil */
-  line-height: 1.0;    /* 🔥 rapat */
-  padding-left: 0;     /* 🔥 biar nggak makan space */
-}
-
-.about-card li {
-  margin-bottom: 2px;  /* 🔥 lebih rapat */
-  display: flex;       /* 🔥 biar icon + text sejajar */
-  align-items: flex-start;
-  gap: 1px;            /* 🔥 jarak kecil */
-}
-
-.about-card i {
-  font-size: 7px;      /* 🔥 kecilin icon */
-  flex-shrink: 0;      /* 🔥 icon tidak gepeng */
-}
-
-.about-card li span {
-  display: block;
-  word-break: break-word; /* 🔥 biar text turun */
-}
-}
-
-/* =====SERVICES===== */
 .section-title {
   font-weight: 700;
 }
@@ -269,8 +276,8 @@
 .card-service {
   border: none;
   border-radius: 16px;
-  transition: all 0.3s ease;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .card-service:hover {
@@ -278,56 +285,45 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* ICON BOX */
 .icon-box {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+
+  width: 60px;
+  height: 60px;
   margin-bottom: 15px;
+
+  border-radius: 50%;
+  font-size: 24px;
 }
 
-.icon-yellow {
-  background: #fff3cd;
-  color: #ffc107;
-}
-.icon-green {
-  background: #d1e7dd;
-  color: #198754;
-}
-.icon-blue {
-  background: #cfe2ff;
-  color: #0d6efd;
-}
-.icon-purple {
-  background: #e2d9f3;
-  color: #6f42c1;
-}
+/* WARNA ICON */
+.icon-yellow { background: #fff3cd; color: #ffc107; }
+.icon-green  { background: #d1e7dd; color: #198754; }
+.icon-blue   { background: #cfe2ff; color: #0d6efd; }
+.icon-purple { background: #e2d9f3; color: #6f42c1; }
 
 .card-img-top {
   height: 160px;
   object-fit: cover;
 }
 
-/* =====PROJECK===== */
+/* ================= PROJECT ================= */
+
 .project-card {
   border-radius: 16px;
   overflow: hidden;
   transition: 0.3s;
 }
+
 .project-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-@media (max-width: 576px) {
-  .project-card img {
-    height: 140px;
-  }
-}
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -337,34 +333,43 @@
   transition: all 0.3s ease;
 }
 
-/* =====TESTIMONI====== */
-/* SECTION */
+/* MOBILE PROJECT */
+@media (max-width: 576px) {
+  .project-card img {
+    height: 140px;
+  }
+}
+
+/* ================= TESTIMONIAL ================= */
+
 .testimonial-section {
   background: #f9fafb;
 }
 
-/* CARD */
 .testimonial-card {
+  position: relative;
+  overflow: hidden;
+
   background: #ffffff;
   border-radius: 20px;
-  position: relative;
+
   transition: 0.3s;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
-/* FOTO PROFILE */
+/* FOTO */
 .testi-img {
   width: 90px;
   height: 90px;
+
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #22c55e; /* hijau */
+  border: 4px solid #22c55e;
 }
 
 /* RATING */
@@ -377,44 +382,52 @@
 .line {
   width: 40px;
   height: 3px;
-  background: #22c55e;
   margin: auto;
+
+  background: #22c55e;
   border-radius: 10px;
 }
 
-/* QUOTE ICON */
+/* QUOTE */
 .quote-icon {
   position: absolute;
   top: 20px;
   right: 25px;
+
   font-size: 60px;
-  color: rgba(34, 197, 94, 0.1);
   font-weight: bold;
+  color: rgba(34, 197, 94, 0.1);
 }
-/* =====KONTAK===== */
+
+/* ================= KONTAK ================= */
+
+/* GLOBAL */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
 }
-/* ✅ FIX OVERFLOW (TAMBAHAN) */
-html, body {
-  overflow-x: hidden; /* 🔥 TAMBAHAN */
-}
-/* CONTACT */
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* SECTION */
 .contact-section {
   background: #f8f9fa;
 }
 
 /* ICON */
 .icon-circle {
-  width: 45px;
-  height: 45px;
-  background: #eef2ff;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  background: #eef2ff;
+  border-radius: 50%;
   color: #0b2545;
 }
 
@@ -434,8 +447,10 @@ html, body {
 .wa-card {
   background: white;
   padding: 25px;
+
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
   transition: 0.3s;
 }
 
@@ -443,13 +458,16 @@ html, body {
   transform: translateY(-8px);
 }
 
-/* BUTTON WA */
+/* BUTTON */
 .btn-outline-wa {
-  border: 2px solid #25d366;
-  color: #25d366;
   padding: 8px 18px;
+
+  border: 2px solid #25d366;
   border-radius: 30px;
+
+  color: #25d366;
   text-decoration: none;
+
   transition: 0.3s;
 }
 
